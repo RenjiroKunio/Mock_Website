@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>NAVARA Dashboard</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="flex h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-white shadow-lg hidden md:flex flex-col">
+
+      <div class="p-6 border-b">
+        <h1 class="text-2xl font-bold text-blue-600">
+          TripPool
+        </h1>
+      </div>
+
+      <nav class="flex-1 p-4 space-y-2">
+
+        <a href="dashboard.html" class="flex items-center gap-3 p-3 rounded-xl bg-blue-100 text-blue-700 font-semibold">
+          <span>🏠</span>
+          Dashboard
+        </a>
+
+        <a href="trip.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          <span>✈️</span>
+          Trips
+        </a>
+
+        <a href="expenses.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          <span>💳</span>
+          Expenses
+        </a>
+
+        <a href="settlement.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          <span>🤝</span>
+          Settlement
+        </a>
+
+        <a href="analytics.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          <span>📊</span>
+          Analytics
+        </a>
+
+        <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          <span>⚙️</span>
+          Settings
+        </a>
+
+      </nav>
+
+      <div class="p-4 border-t">
+        <div class="flex items-center gap-3">
+          <img
+            src="https://i.pravatar.cc/40"
+            class="w-10 h-10 rounded-full"
+          />
+
+          <div>
+            <p class="font-semibold text-sm">Renjiro</p>
+            <p class="text-gray-500 text-xs">Premium User</p>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 overflow-y-auto">
+
+      <!-- TOP NAVBAR -->
+      <header class="bg-white shadow-sm px-8 py-5 flex items-center justify-between">
+
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">
+            Dashboard
+          </h2>
+
+          <p class="text-gray-500 mt-1">
+            Welcome back! Here's your travel budget overview.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4">
+
+          <button class="relative bg-gray-100 p-3 rounded-full hover:bg-gray-200 transition">
+            🔔
+
+            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+          </button>
+
+          <img
+            src="https://i.pravatar.cc/45"
+            class="w-11 h-11 rounded-full border-2 border-blue-500"
+          />
+
+        </div>
+
+      </header>
+
+      <!-- DASHBOARD CONTENT -->
+      <section class="p-8">
+
+        <!-- SUMMARY CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+              <h3 class="text-gray-500 font-medium">
+                Total Pool
+              </h3>
+
+              <div class="bg-blue-100 text-blue-600 p-3 rounded-xl">
+                💰
+              </div>
+            </div>
+
+            <h1 class="text-3xl font-bold mt-4">
+              $4,820
+            </h1>
+
+            <p class="text-green-500 text-sm mt-2">
+              +12% this month
+            </p>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+              <h3 class="text-gray-500 font-medium">
+                Total Expenses
+              </h3>
+
+              <div class="bg-red-100 text-red-600 p-3 rounded-xl">
+                💳
+              </div>
+            </div>
+
+            <h1 class="text-3xl font-bold mt-4">
+              $2,145
+            </h1>
+
+            <p class="text-red-500 text-sm mt-2">
+              +8% this week
+            </p>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+              <h3 class="text-gray-500 font-medium">
+                Remaining Budget
+              </h3>
+
+              <div class="bg-green-100 text-green-600 p-3 rounded-xl">
+                📈
+              </div>
+            </div>
+
+            <h1 class="text-3xl font-bold mt-4">
+              $2,675
+            </h1>
+
+            <p class="text-green-500 text-sm mt-2">
+              On track
+            </p>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+              <h3 class="text-gray-500 font-medium">
+                Group Members
+              </h3>
+
+              <div class="bg-purple-100 text-purple-600 p-3 rounded-xl">
+                👥
+              </div>
+            </div>
+
+            <h1 class="text-3xl font-bold mt-4">
+              8
+            </h1>
+
+            <p class="text-gray-500 text-sm mt-2">
+              Active travelers
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- RECENT TRIPS -->
+        <div class="mt-10 bg-white rounded-2xl shadow-sm p-6">
+
+          <div class="flex items-center justify-between mb-6">
+
+            <div>
+              <h2 class="text-xl font-bold text-gray-800">
+                Recent Trips
+              </h2>
+
+              <p class="text-gray-500 text-sm mt-1">
+                Manage your active group travels
+              </p>
+            </div>
+
+            <button class="bg-blue-600 text-white px-5 py-3 rounded-xl hover:bg-blue-700 transition">
+              + Create Trip
+            </button>
+
+          </div>
+
+          <!-- TRIP CARDS -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <!-- TRIP -->
+            <div class="border rounded-2xl p-5 hover:shadow-md transition">
+
+              <div class="flex items-center justify-between">
+
+                <div>
+                  <h3 class="text-lg font-bold">
+                    Bali Adventure
+                  </h3>
+
+                  <p class="text-gray-500 text-sm mt-1">
+                    July 10 - July 17
+                  </p>
+                </div>
+
+                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                  Active
+                </span>
+
+              </div>
+
+              <div class="mt-5">
+
+                <div class="flex justify-between text-sm mb-2">
+                  <span class="text-gray-500">Budget Usage</span>
+                  <span class="font-semibold">65%</span>
+                </div>
+
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-blue-600 h-3 rounded-full w-[65%]"></div>
+                </div>
+
+              </div>
+
+              <div class="flex justify-between mt-5 text-sm">
+
+                <div>
+                  <p class="text-gray-500">Pool</p>
+                  <p class="font-bold">$2,000</p>
+                </div>
+
+                <div>
+                  <p class="text-gray-500">Spent</p>
+                  <p class="font-bold">$1,300</p>
+                </div>
+
+                <div>
+                  <p class="text-gray-500">Members</p>
+                  <p class="font-bold">5</p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- TRIP -->
+            <div class="border rounded-2xl p-5 hover:shadow-md transition">
+
+              <div class="flex items-center justify-between">
+
+                <div>
+                  <h3 class="text-lg font-bold">
+                    Japan Spring Tour
+                  </h3>
+
+                  <p class="text-gray-500 text-sm mt-1">
+                    March 2 - March 12
+                  </p>
+                </div>
+
+                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+                  Planning
+                </span>
+
+              </div>
+
+              <div class="mt-5">
+
+                <div class="flex justify-between text-sm mb-2">
+                  <span class="text-gray-500">Budget Usage</span>
+                  <span class="font-semibold">35%</span>
+                </div>
+
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-purple-600 h-3 rounded-full w-[35%]"></div>
+                </div>
+
+              </div>
+
+              <div class="flex justify-between mt-5 text-sm">
+
+                <div>
+                  <p class="text-gray-500">Pool</p>
+                  <p class="font-bold">$5,500</p>
+                </div>
+
+                <div>
+                  <p class="text-gray-500">Spent</p>
+                  <p class="font-bold">$1,925</p>
+                </div>
+
+                <div>
+                  <p class="text-gray-500">Members</p>
+                  <p class="font-bold">8</p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RECENT EXPENSES -->
+        <div class="mt-10 bg-white rounded-2xl shadow-sm p-6">
+
+          <div class="flex items-center justify-between mb-6">
+
+            <div>
+              <h2 class="text-xl font-bold text-gray-800">
+                Recent Expenses
+              </h2>
+
+              <p class="text-gray-500 text-sm mt-1">
+                Latest group spending activity
+              </p>
+            </div>
+
+          </div>
+
+          <div class="overflow-x-auto">
+
+            <table class="w-full">
+
+              <thead>
+                <tr class="border-b text-left text-gray-500 text-sm">
+
+                  <th class="pb-4">Expense</th>
+                  <th class="pb-4">Category</th>
+                  <th class="pb-4">Paid By</th>
+                  <th class="pb-4">Amount</th>
+                  <th class="pb-4">Status</th>
+
+                </tr>
+              </thead>
+
+              <tbody class="text-gray-700">
+
+                <tr class="border-b hover:bg-gray-50">
+
+                  <td class="py-5 font-medium">
+                    Hotel Booking
+                  </td>
+
+                  <td class="py-5">
+                    Accommodation
+                  </td>
+
+                  <td class="py-5">
+                    Alex
+                  </td>
+
+                  <td class="py-5 font-semibold">
+                    $420
+                  </td>
+
+                  <td class="py-5">
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                      Completed
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr class="border-b hover:bg-gray-50">
+
+                  <td class="py-5 font-medium">
+                    Group Dinner
+                  </td>
+
+                  <td class="py-5">
+                    Food
+                  </td>
+
+                  <td class="py-5">
+                    Sarah
+                  </td>
+
+                  <td class="py-5 font-semibold">
+                    $125
+                  </td>
+
+                  <td class="py-5">
+                    <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+                      Pending
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr class="hover:bg-gray-50">
+
+                  <td class="py-5 font-medium">
+                    Train Tickets
+                  </td>
+
+                  <td class="py-5">
+                    Transport
+                  </td>
+
+                  <td class="py-5">
+                    John
+                  </td>
+
+                  <td class="py-5 font-semibold">
+                    $310
+                  </td>
+
+                  <td class="py-5">
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                      Completed
+                    </span>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+  <script src="js\script.js"></script>
+
+</body>
+</html>

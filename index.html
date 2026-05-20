@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>NAVARA - Smart Group Travel Budgeting</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
+          N
+        </div>
+
+        <h1 class="text-2xl font-bold">
+          NAVARA
+        </h1>
+
+      </div>
+
+      <!-- NAV LINKS -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+
+        <a href="#features" class="hover:text-blue-600 transition">
+          Features
+        </a>
+
+        <a href="#how-it-works" class="hover:text-blue-600 transition">
+          How It Works
+        </a>
+
+        <a href="#about" class="hover:text-blue-600 transition">
+          About
+        </a>
+
+      </nav>
+
+      <!-- BUTTONS -->
+      <div class="flex items-center gap-4">
+
+        <a
+          href="dashboard.html"
+          class="hidden md:block text-sm font-medium hover:text-blue-600 transition"
+        >
+          Dashboard
+        </a>
+
+        <a
+          href="dashboard.html"
+          class="bg-blue-600 text-white px-5 py-3 rounded-xl hover:bg-blue-700 transition"
+        >
+          Get Started
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="pt-36 pb-24 px-6">
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+      <!-- LEFT -->
+      <div>
+
+        <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          ✈️ Smart Collaborative Travel Budgeting
+        </div>
+
+        <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight">
+
+          Travel Together
+          <span class="text-blue-600">
+            Without Financial Stress
+          </span>
+
+        </h1>
+
+        <p class="text-gray-600 text-lg mt-8 leading-relaxed max-w-xl">
+
+          NAVARA helps groups manage shared travel expenses,
+          split payments fairly, track budgets in real time,
+          and settle balances seamlessly.
+
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="flex flex-col sm:flex-row gap-4 mt-10">
+
+          <a
+            href="dashboard.html"
+            class="bg-blue-600 text-white px-7 py-4 rounded-2xl hover:bg-blue-700 transition text-center font-semibold"
+          >
+            Launch Dashboard
+          </a>
+
+          <a
+            href="#features"
+            class="bg-white border border-gray-300 px-7 py-4 rounded-2xl hover:bg-gray-100 transition text-center font-semibold"
+          >
+            Explore Features
+          </a>
+
+        </div>
+
+        <!-- STATS -->
+        <div class="flex flex-wrap gap-10 mt-14">
+
+          <div>
+
+            <h2 class="text-3xl font-bold">
+              10K+
+            </h2>
+
+            <p class="text-gray-500 mt-1">
+              Group Trips Managed
+            </p>
+
+          </div>
+
+          <div>
+
+            <h2 class="text-3xl font-bold">
+              $2M+
+            </h2>
+
+            <p class="text-gray-500 mt-1">
+              Expenses Tracked
+            </p>
+
+          </div>
+
+          <div>
+
+            <h2 class="text-3xl font-bold">
+              98%
+            </h2>
+
+            <p class="text-gray-500 mt-1">
+              Satisfaction Rate
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="relative">
+
+        <!-- MAIN CARD -->
+        <div class="bg-white rounded-3xl shadow-2xl p-8 border">
+
+          <!-- TOP -->
+          <div class="flex items-center justify-between mb-8">
+
+            <div>
+
+              <p class="text-gray-500 text-sm">
+                Active Trip
+              </p>
+
+              <h2 class="text-2xl font-bold mt-2">
+                Bali Adventure
+              </h2>
+
+            </div>
+
+            <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+              Active
+            </span>
+
+          </div>
+
+          <!-- POOL -->
+          <div class="bg-blue-600 text-white rounded-2xl p-6">
+
+            <p class="text-blue-100">
+              Total Group Pool
+            </p>
+
+            <h1 class="text-4xl font-bold mt-3">
+              $4,820
+            </h1>
+
+            <div class="flex justify-between mt-6 text-sm">
+
+              <div>
+
+                <p class="text-blue-100">
+                  Spent
+                </p>
+
+                <p class="font-semibold mt-1">
+                  $2,145
+                </p>
+
+              </div>
+
+              <div>
+
+                <p class="text-blue-100">
+                  Remaining
+                </p>
+
+                <p class="font-semibold mt-1">
+                  $2,675
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- MEMBERS -->
+          <div class="mt-8">
+
+            <div class="flex items-center justify-between mb-5">
+
+              <h3 class="font-bold text-lg">
+                Group Members
+              </h3>
+
+              <span class="text-sm text-gray-500">
+                5 Travelers
+              </span>
+
+            </div>
+
+            <div class="space-y-4">
+
+              <!-- MEMBER -->
+              <div class="flex items-center justify-between">
+
+                <div class="flex items-center gap-3">
+
+                  <img
+                    src="https://i.pravatar.cc/70"
+                    class="w-11 h-11 rounded-full"
+                  />
+
+                  <div>
+
+                    <p class="font-medium">
+                      Alex
+                    </p>
+
+                    <p class="text-sm text-gray-500">
+                      Paid $500
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <span class="text-green-600 font-semibold">
+                  +$120
+                </span>
+
+              </div>
+
+              <!-- MEMBER -->
+              <div class="flex items-center justify-between">
+
+                <div class="flex items-center gap-3">
+
+                  <img
+                    src="https://i.pravatar.cc/71"
+                    class="w-11 h-11 rounded-full"
+                  />
+
+                  <div>
+
+                    <p class="font-medium">
+                      Sarah
+                    </p>
+
+                    <p class="text-sm text-gray-500">
+                      Paid $350
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <span class="text-red-500 font-semibold">
+                  -$40
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- FLOATING CARD -->
+        <div class="hidden lg:block absolute -bottom-8 -left-10 bg-white rounded-2xl shadow-xl p-5 border">
+
+          <div class="flex items-center gap-4">
+
+            <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-2xl">
+              📈
+            </div>
+
+            <div>
+
+              <p class="text-gray-500 text-sm">
+                Budget Status
+              </p>
+
+              <h3 class="text-xl font-bold mt-1">
+                Under Budget
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-24 px-6 bg-white">
+
+    <div class="max-w-7xl mx-auto">
+
+      <!-- TITLE -->
+      <div class="text-center max-w-3xl mx-auto">
+
+        <h2 class="text-4xl font-bold">
+          Everything Your Group Needs
+        </h2>
+
+        <p class="text-gray-600 mt-6 text-lg">
+          NAVARA simplifies collaborative travel budgeting
+          with powerful financial management tools.
+        </p>
+
+      </div>
+
+      <!-- FEATURE GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-16">
+
+        <!-- FEATURE -->
+        <div class="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition">
+
+          <div class="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center text-3xl">
+            💰
+          </div>
+
+          <h3 class="text-2xl font-bold mt-8">
+            Budget Pooling
+          </h3>
+
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            Combine contributions from every traveler into a shared trip wallet.
+          </p>
+
+        </div>
+
+        <!-- FEATURE -->
+        <div class="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition">
+
+          <div class="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+            🤝
+          </div>
+
+          <h3 class="text-2xl font-bold mt-8">
+            Smart Settlement
+          </h3>
+
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            Automatically calculate who owes who with fair payment balancing.
+          </p>
+
+        </div>
+
+        <!-- FEATURE -->
+        <div class="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition">
+
+          <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center text-3xl">
+            📊
+          </div>
+
+          <h3 class="text-2xl font-bold mt-8">
+            Expense Analytics
+          </h3>
+
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            Visualize spending trends and track your group budget in real time.
+          </p>
+
+        </div>
+
+        <!-- FEATURE -->
+        <div class="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition">
+
+          <div class="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center text-3xl">
+            ✈️
+          </div>
+
+          <h3 class="text-2xl font-bold mt-8">
+            Trip Management
+          </h3>
+
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            Organize destinations, travelers, schedules, and activities together.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="py-24 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center">
+
+        <h2 class="text-4xl font-bold">
+          How NAVARA Works
+        </h2>
+
+        <p class="text-gray-600 mt-5 text-lg">
+          Simple steps to stress-free group travel budgeting
+        </p>
+
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
+
+        <!-- STEP -->
+        <div class="text-center">
+
+          <div class="w-20 h-20 rounded-full bg-blue-600 text-white text-3xl flex items-center justify-center mx-auto font-bold">
+            1
+          </div>
+
+          <h3 class="text-2xl font-bold mt-8">
+            Create a Trip
+          </h3>
+
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            Start a travel group and invite your friends or teammates.
+          </p>
+
+        </div>
+
+        <!-- STEP -->
+        <div class="text-center">
+
+          <div class="w-20 h-20 rounded-full bg-blue-600 text-white text-3xl flex items-center justify-center mx-auto font-bold">
+            2
+          </div>
+
+          <h3 class="text-2xl font-bold mt-8">
+            Add Expenses
+          </h3>
+
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            Track spending, split costs fairly, and monitor contributions.
+          </p>
+
+        </div>
+
+        <!-- STEP -->
+        <div class="text-center">
+
+          <div class="w-20 h-20 rounded-full bg-blue-600 text-white text-3xl flex items-center justify-center mx-auto font-bold">
+            3
+          </div>
+
+          <h3 class="text-2xl font-bold mt-8">
+            Settle Instantly
+          </h3>
+
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            View balances and settle payments without confusion.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6">
+
+    <div class="max-w-6xl mx-auto bg-blue-600 rounded-[40px] p-12 lg:p-20 text-white text-center">
+
+      <h2 class="text-4xl lg:text-5xl font-bold leading-tight">
+        Ready to Simplify Group Travel?
+      </h2>
+
+      <p class="text-blue-100 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
+        Start managing shared travel expenses smarter with NAVARA.
+      </p>
+
+      <div class="mt-10">
+
+        <a
+          href="dashboard.html"
+          class="inline-block bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transition"
+        >
+          Start Your First Trip
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="about" class="bg-white border-t">
+
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+
+      <div>
+
+        <div class="flex items-center gap-3">
+
+          <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold">
+            N
+          </div>
+
+          <h2 class="text-2xl font-bold">
+            NAVARA
+          </h2>
+
+        </div>
+
+        <p class="text-gray-500 mt-4 max-w-md">
+          Collaborative travel budgeting platform designed for smarter group adventures.
+        </p>
+
+      </div>
+
+      <div class="flex gap-8 text-sm text-gray-500">
+
+        <a href="#" class="hover:text-blue-600 transition">
+          Privacy
+        </a>
+
+        <a href="#" class="hover:text-blue-600 transition">
+          Terms
+        </a>
+
+        <a href="#" class="hover:text-blue-600 transition">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+  <script src="js\script.js"></script>
+</body>
+</html>

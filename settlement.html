@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>NAVARA Settlement</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="flex h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-white shadow-lg hidden md:flex flex-col">
+
+      <div class="p-6 border-b flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
+          N
+        </div>
+
+        <h1 class="text-2xl font-bold text-gray-800">
+          NAVARA
+        </h1>
+
+      </div>
+
+      <nav class="flex-1 p-4 space-y-2">
+
+        <a href="dashboard.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          🏠 Dashboard
+        </a>
+
+        <a href="trip.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          ✈️ Trips
+        </a>
+
+        <a href="expenses.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          💳 Expenses
+        </a>
+
+        <a href="settlement.html" class="flex items-center gap-3 p-3 rounded-xl bg-blue-100 text-blue-700 font-semibold">
+          🤝 Settlement
+        </a>
+
+        <a href="analytics.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          📊 Analytics
+        </a>
+
+        <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          ⚙️ Settings
+        </a>
+
+      </nav>
+
+      <div class="p-4 border-t">
+
+        <div class="flex items-center gap-3">
+
+          <img
+            src="https://i.pravatar.cc/52"
+            class="w-10 h-10 rounded-full"
+          />
+
+          <div>
+
+            <p class="font-semibold text-sm">
+              Renjiro
+            </p>
+
+            <p class="text-gray-500 text-xs">
+              Finance Overview
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 overflow-y-auto">
+
+      <!-- HEADER -->
+      <header class="bg-white shadow-sm px-8 py-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+
+        <div>
+
+          <h2 class="text-3xl font-bold text-gray-800">
+            Settlement Center
+          </h2>
+
+          <p class="text-gray-500 mt-1">
+            Manage balances, debts, and group payment settlements
+          </p>
+
+        </div>
+
+        <button class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition">
+          + New Settlement
+        </button>
+
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <section class="p-8">
+
+        <!-- TOP CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+
+              <div>
+
+                <p class="text-gray-500">
+                  Total Owed
+                </p>
+
+                <h1 class="text-3xl font-bold mt-3">
+                  $425
+                </h1>
+
+              </div>
+
+              <div class="bg-red-100 text-red-600 p-4 rounded-2xl text-2xl">
+                💸
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+
+              <div>
+
+                <p class="text-gray-500">
+                  Pending Payments
+                </p>
+
+                <h1 class="text-3xl font-bold mt-3">
+                  6
+                </h1>
+
+              </div>
+
+              <div class="bg-yellow-100 text-yellow-600 p-4 rounded-2xl text-2xl">
+                ⏳
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+
+              <div>
+
+                <p class="text-gray-500">
+                  Completed Settlements
+                </p>
+
+                <h1 class="text-3xl font-bold mt-3">
+                  14
+                </h1>
+
+              </div>
+
+              <div class="bg-green-100 text-green-600 p-4 rounded-2xl text-2xl">
+                ✅
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+
+              <div>
+
+                <p class="text-gray-500">
+                  Group Balance
+                </p>
+
+                <h1 class="text-3xl font-bold mt-3">
+                  +$1,250
+                </h1>
+
+              </div>
+
+              <div class="bg-blue-100 text-blue-600 p-4 rounded-2xl text-2xl">
+                📈
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-8">
+
+          <!-- DEBT TABLE -->
+          <div class="xl:col-span-2 bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between mb-6">
+
+              <div>
+
+                <h2 class="text-2xl font-bold text-gray-800">
+                  Outstanding Balances
+                </h2>
+
+                <p class="text-gray-500 text-sm mt-1">
+                  Current member debts and settlements
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="overflow-x-auto">
+
+              <table class="w-full">
+
+                <thead>
+
+                  <tr class="border-b text-left text-gray-500 text-sm">
+
+                    <th class="pb-4">From</th>
+                    <th class="pb-4">To</th>
+                    <th class="pb-4">Reason</th>
+                    <th class="pb-4">Amount</th>
+                    <th class="pb-4">Status</th>
+                    <th class="pb-4">Action</th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody class="text-gray-700">
+
+                  <!-- ROW -->
+                  <tr class="border-b hover:bg-gray-50">
+
+                    <td class="py-5 font-medium">
+                      Sarah
+                    </td>
+
+                    <td class="py-5">
+                      Alex
+                    </td>
+
+                    <td class="py-5">
+                      Hotel Split
+                    </td>
+
+                    <td class="py-5 font-semibold text-red-600">
+                      $35
+                    </td>
+
+                    <td class="py-5">
+
+                      <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+                        Pending
+                      </span>
+
+                    </td>
+
+                    <td class="py-5">
+
+                      <button class="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition text-sm">
+                        Settle
+                      </button>
+
+                    </td>
+
+                  </tr>
+
+                  <!-- ROW -->
+                  <tr class="border-b hover:bg-gray-50">
+
+                    <td class="py-5 font-medium">
+                      Mia
+                    </td>
+
+                    <td class="py-5">
+                      John
+                    </td>
+
+                    <td class="py-5">
+                      Train Tickets
+                    </td>
+
+                    <td class="py-5 font-semibold text-red-600">
+                      $20
+                    </td>
+
+                    <td class="py-5">
+
+                      <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+                        Pending
+                      </span>
+
+                    </td>
+
+                    <td class="py-5">
+
+                      <button class="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition text-sm">
+                        Settle
+                      </button>
+
+                    </td>
+
+                  </tr>
+
+                  <!-- ROW -->
+                  <tr class="border-b hover:bg-gray-50">
+
+                    <td class="py-5 font-medium">
+                      David
+                    </td>
+
+                    <td class="py-5">
+                      Sarah
+                    </td>
+
+                    <td class="py-5">
+                      Food Expense
+                    </td>
+
+                    <td class="py-5 font-semibold text-red-600">
+                      $55
+                    </td>
+
+                    <td class="py-5">
+
+                      <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                        Completed
+                      </span>
+
+                    </td>
+
+                    <td class="py-5">
+
+                      <button class="bg-gray-200 text-gray-600 px-4 py-2 rounded-xl text-sm cursor-not-allowed">
+                        Settled
+                      </button>
+
+                    </td>
+
+                  </tr>
+
+                  <!-- ROW -->
+                  <tr class="hover:bg-gray-50">
+
+                    <td class="py-5 font-medium">
+                      Mia
+                    </td>
+
+                    <td class="py-5">
+                      Alex
+                    </td>
+
+                    <td class="py-5">
+                      Beach Activities
+                    </td>
+
+                    <td class="py-5 font-semibold text-red-600">
+                      $45
+                    </td>
+
+                    <td class="py-5">
+
+                      <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">
+                        Overdue
+                      </span>
+
+                    </td>
+
+                    <td class="py-5">
+
+                      <button class="bg-red-600 text-white px-4 py-2 rounded-xl hover:bg-red-700 transition text-sm">
+                        Remind
+                      </button>
+
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+          <!-- SIDE PANEL -->
+          <div class="space-y-6">
+
+            <!-- MEMBER BALANCES -->
+            <div class="bg-white rounded-2xl shadow-sm p-6">
+
+              <h2 class="text-xl font-bold text-gray-800">
+                Member Balances
+              </h2>
+
+              <p class="text-gray-500 text-sm mt-1 mb-6">
+                Individual financial standings
+              </p>
+
+              <div class="space-y-5">
+
+                <!-- MEMBER -->
+                <div class="flex items-center justify-between">
+
+                  <div class="flex items-center gap-3">
+
+                    <img
+                      src="https://i.pravatar.cc/60"
+                      class="w-10 h-10 rounded-full"
+                    />
+
+                    <div>
+
+                      <p class="font-medium">
+                        Alex
+                      </p>
+
+                      <p class="text-xs text-gray-500">
+                        Creditor
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <span class="font-bold text-green-600">
+                    +$260
+                  </span>
+
+                </div>
+
+                <!-- MEMBER -->
+                <div class="flex items-center justify-between">
+
+                  <div class="flex items-center gap-3">
+
+                    <img
+                      src="https://i.pravatar.cc/61"
+                      class="w-10 h-10 rounded-full"
+                    />
+
+                    <div>
+
+                      <p class="font-medium">
+                        Sarah
+                      </p>
+
+                      <p class="text-xs text-gray-500">
+                        Debtor
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <span class="font-bold text-red-600">
+                    -$150
+                  </span>
+
+                </div>
+
+                <!-- MEMBER -->
+                <div class="flex items-center justify-between">
+
+                  <div class="flex items-center gap-3">
+
+                    <img
+                      src="https://i.pravatar.cc/62"
+                      class="w-10 h-10 rounded-full"
+                    />
+
+                    <div>
+
+                      <p class="font-medium">
+                        John
+                      </p>
+
+                      <p class="text-xs text-gray-500">
+                        Creditor
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <span class="font-bold text-green-600">
+                    +$120
+                  </span>
+
+                </div>
+
+                <!-- MEMBER -->
+                <div class="flex items-center justify-between">
+
+                  <div class="flex items-center gap-3">
+
+                    <img
+                      src="https://i.pravatar.cc/63"
+                      class="w-10 h-10 rounded-full"
+                    />
+
+                    <div>
+
+                      <p class="font-medium">
+                        Mia
+                      </p>
+
+                      <p class="text-xs text-gray-500">
+                        Debtor
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <span class="font-bold text-red-600">
+                    -$220
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ACTIVITY FEED -->
+            <div class="bg-white rounded-2xl shadow-sm p-6">
+
+              <h2 class="text-xl font-bold text-gray-800">
+                Settlement Activity
+              </h2>
+
+              <p class="text-gray-500 text-sm mt-1 mb-6">
+                Latest payment actions
+              </p>
+
+              <div class="space-y-5">
+
+                <!-- ACTIVITY -->
+                <div class="flex gap-4">
+
+                  <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                    ✅
+                  </div>
+
+                  <div>
+
+                    <p class="text-sm font-medium">
+                      Sarah settled $20 with Alex
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                      1 hour ago
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <!-- ACTIVITY -->
+                <div class="flex gap-4">
+
+                  <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                    💰
+                  </div>
+
+                  <div>
+
+                    <p class="text-sm font-medium">
+                      Alex received payment
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                      3 hours ago
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <!-- ACTIVITY -->
+                <div class="flex gap-4">
+
+                  <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                    🔔
+                  </div>
+
+                  <div>
+
+                    <p class="text-sm font-medium">
+                      Reminder sent to Mia
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                      Yesterday
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+  <script src="js\script.js"></script>
+</body>
+</html>

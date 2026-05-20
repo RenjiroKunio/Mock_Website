@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>NAVARA Expenses</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="flex h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-white shadow-lg hidden md:flex flex-col">
+
+      <div class="p-6 border-b flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
+          N
+        </div>
+
+        <h1 class="text-2xl font-bold text-gray-800">
+          NAVARA
+        </h1>
+
+      </div>
+
+      <nav class="flex-1 p-4 space-y-2">
+
+        <a href="dashboard.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          🏠 Dashboard
+        </a>
+
+        <a href="trip.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          ✈️ Trips
+        </a>
+
+        <a href="expenses.html" class="flex items-center gap-3 p-3 rounded-xl bg-blue-100 text-blue-700 font-semibold">
+          💳 Expenses
+        </a>
+
+        <a href="settlement.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          🤝 Settlement
+        </a>
+
+        <a href="analytics.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          📊 Analytics
+        </a>
+
+        <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+          ⚙️ Settings
+        </a>
+
+      </nav>
+
+      <div class="p-4 border-t">
+
+        <div class="flex items-center gap-3">
+
+          <img
+            src="https://i.pravatar.cc/45"
+            class="w-10 h-10 rounded-full"
+          />
+
+          <div>
+            <p class="font-semibold text-sm">
+              Renjiro
+            </p>
+
+            <p class="text-gray-500 text-xs">
+              Trip Organizer
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 overflow-y-auto">
+
+      <!-- HEADER -->
+      <header class="bg-white shadow-sm px-8 py-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+
+        <div>
+
+          <h2 class="text-3xl font-bold text-gray-800">
+            Expense Management
+          </h2>
+
+          <p class="text-gray-500 mt-1">
+            Track and organize all group spending activities
+          </p>
+
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4">
+
+          <!-- SEARCH -->
+          <input
+            type="text"
+            placeholder="Search expenses..."
+            class="px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+
+          <!-- FILTER -->
+          <select class="px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <option>All Categories</option>
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Accommodation</option>
+            <option>Entertainment</option>
+
+          </select>
+
+          <!-- BUTTON -->
+          <button class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition">
+            + Add Expense
+          </button>
+
+        </div>
+
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <section class="p-8">
+
+        <!-- STAT CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+
+              <div>
+
+                <p class="text-gray-500">
+                  Total Expenses
+                </p>
+
+                <h1 class="text-3xl font-bold mt-3">
+                  $4,820
+                </h1>
+
+              </div>
+
+              <div class="bg-red-100 text-red-600 p-4 rounded-2xl text-2xl">
+                💳
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+
+              <div>
+
+                <p class="text-gray-500">
+                  Food Spending
+                </p>
+
+                <h1 class="text-3xl font-bold mt-3">
+                  $1,140
+                </h1>
+
+              </div>
+
+              <div class="bg-orange-100 text-orange-600 p-4 rounded-2xl text-2xl">
+                🍜
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+
+              <div>
+
+                <p class="text-gray-500">
+                  Accommodation
+                </p>
+
+                <h1 class="text-3xl font-bold mt-3">
+                  $2,050
+                </h1>
+
+              </div>
+
+              <div class="bg-blue-100 text-blue-600 p-4 rounded-2xl text-2xl">
+                🏨
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CARD -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between">
+
+              <div>
+
+                <p class="text-gray-500">
+                  Transport
+                </p>
+
+                <h1 class="text-3xl font-bold mt-3">
+                  $860
+                </h1>
+
+              </div>
+
+              <div class="bg-green-100 text-green-600 p-4 rounded-2xl text-2xl">
+                🚆
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-1 xl:grid-cols-4 gap-6 mt-8">
+
+          <!-- EXPENSE TABLE -->
+          <div class="xl:col-span-3 bg-white rounded-2xl shadow-sm p-6">
+
+            <div class="flex items-center justify-between mb-6">
+
+              <div>
+
+                <h2 class="text-xl font-bold text-gray-800">
+                  Expense History
+                </h2>
+
+                <p class="text-gray-500 text-sm mt-1">
+                  All recorded trip expenses
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="overflow-x-auto">
+
+              <table class="w-full">
+
+                <thead>
+
+                  <tr class="border-b text-left text-gray-500 text-sm">
+
+                    <th class="pb-4">Expense</th>
+                    <th class="pb-4">Category</th>
+                    <th class="pb-4">Paid By</th>
+                    <th class="pb-4">Date</th>
+                    <th class="pb-4">Amount</th>
+                    <th class="pb-4">Status</th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody class="text-gray-700">
+
+                  <!-- ROW -->
+                  <tr class="border-b hover:bg-gray-50">
+
+                    <td class="py-5 font-medium">
+                      Hotel Booking
+                    </td>
+
+                    <td class="py-5">
+                      Accommodation
+                    </td>
+
+                    <td class="py-5">
+                      Alex
+                    </td>
+
+                    <td class="py-5">
+                      Jul 12
+                    </td>
+
+                    <td class="py-5 font-semibold">
+                      $420
+                    </td>
+
+                    <td class="py-5">
+
+                      <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                        Completed
+                      </span>
+
+                    </td>
+
+                  </tr>
+
+                  <!-- ROW -->
+                  <tr class="border-b hover:bg-gray-50">
+
+                    <td class="py-5 font-medium">
+                      Sushi Dinner
+                    </td>
+
+                    <td class="py-5">
+                      Food
+                    </td>
+
+                    <td class="py-5">
+                      Sarah
+                    </td>
+
+                    <td class="py-5">
+                      Jul 13
+                    </td>
+
+                    <td class="py-5 font-semibold">
+                      $125
+                    </td>
+
+                    <td class="py-5">
+
+                      <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+                        Pending
+                      </span>
+
+                    </td>
+
+                  </tr>
+
+                  <!-- ROW -->
+                  <tr class="border-b hover:bg-gray-50">
+
+                    <td class="py-5 font-medium">
+                      Train Tickets
+                    </td>
+
+                    <td class="py-5">
+                      Transport
+                    </td>
+
+                    <td class="py-5">
+                      John
+                    </td>
+
+                    <td class="py-5">
+                      Jul 14
+                    </td>
+
+                    <td class="py-5 font-semibold">
+                      $310
+                    </td>
+
+                    <td class="py-5">
+
+                      <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                        Completed
+                      </span>
+
+                    </td>
+
+                  </tr>
+
+                  <!-- ROW -->
+                  <tr class="border-b hover:bg-gray-50">
+
+                    <td class="py-5 font-medium">
+                      Beach Activities
+                    </td>
+
+                    <td class="py-5">
+                      Entertainment
+                    </td>
+
+                    <td class="py-5">
+                      Mia
+                    </td>
+
+                    <td class="py-5">
+                      Jul 15
+                    </td>
+
+                    <td class="py-5 font-semibold">
+                      $180
+                    </td>
+
+                    <td class="py-5">
+
+                      <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                        Completed
+                      </span>
+
+                    </td>
+
+                  </tr>
+
+                  <!-- ROW -->
+                  <tr class="hover:bg-gray-50">
+
+                    <td class="py-5 font-medium">
+                      Airport Taxi
+                    </td>
+
+                    <td class="py-5">
+                      Transport
+                    </td>
+
+                    <td class="py-5">
+                      David
+                    </td>
+
+                    <td class="py-5">
+                      Jul 16
+                    </td>
+
+                    <td class="py-5 font-semibold">
+                      $75
+                    </td>
+
+                    <td class="py-5">
+
+                      <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">
+                        Overdue
+                      </span>
+
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+          <!-- SIDEBAR INFO -->
+          <div class="space-y-6">
+
+            <!-- CATEGORY BREAKDOWN -->
+            <div class="bg-white rounded-2xl shadow-sm p-6">
+
+              <h2 class="text-xl font-bold text-gray-800">
+                Categories
+              </h2>
+
+              <p class="text-gray-500 text-sm mt-1 mb-5">
+                Expense distribution
+              </p>
+
+              <div class="space-y-5">
+
+                <!-- ITEM -->
+                <div>
+
+                  <div class="flex justify-between text-sm mb-2">
+
+                    <span>Accommodation</span>
+                    <span>42%</span>
+
+                  </div>
+
+                  <div class="w-full bg-gray-200 rounded-full h-3">
+
+                    <div class="bg-blue-600 h-3 rounded-full w-[42%]"></div>
+
+                  </div>
+
+                </div>
+
+                <!-- ITEM -->
+                <div>
+
+                  <div class="flex justify-between text-sm mb-2">
+
+                    <span>Food</span>
+                    <span>25%</span>
+
+                  </div>
+
+                  <div class="w-full bg-gray-200 rounded-full h-3">
+
+                    <div class="bg-orange-500 h-3 rounded-full w-[25%]"></div>
+
+                  </div>
+
+                </div>
+
+                <!-- ITEM -->
+                <div>
+
+                  <div class="flex justify-between text-sm mb-2">
+
+                    <span>Transport</span>
+                    <span>18%</span>
+
+                  </div>
+
+                  <div class="w-full bg-gray-200 rounded-full h-3">
+
+                    <div class="bg-green-500 h-3 rounded-full w-[18%]"></div>
+
+                  </div>
+
+                </div>
+
+                <!-- ITEM -->
+                <div>
+
+                  <div class="flex justify-between text-sm mb-2">
+
+                    <span>Entertainment</span>
+                    <span>15%</span>
+
+                  </div>
+
+                  <div class="w-full bg-gray-200 rounded-full h-3">
+
+                    <div class="bg-purple-500 h-3 rounded-full w-[15%]"></div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- RECENT ACTIVITY -->
+            <div class="bg-white rounded-2xl shadow-sm p-6">
+
+              <h2 class="text-xl font-bold text-gray-800">
+                Activity Feed
+              </h2>
+
+              <p class="text-gray-500 text-sm mt-1 mb-5">
+                Latest actions
+              </p>
+
+              <div class="space-y-5">
+
+                <!-- ACTIVITY -->
+                <div class="flex gap-4">
+
+                  <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                    💳
+                  </div>
+
+                  <div>
+
+                    <p class="text-sm font-medium">
+                      Alex added Hotel Booking
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                      2 hours ago
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <!-- ACTIVITY -->
+                <div class="flex gap-4">
+
+                  <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                    ✅
+                  </div>
+
+                  <div>
+
+                    <p class="text-sm font-medium">
+                      Sarah settled $20 payment
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                      5 hours ago
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <!-- ACTIVITY -->
+                <div class="flex gap-4">
+
+                  <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    🍜
+                  </div>
+
+                  <div>
+
+                    <p class="text-sm font-medium">
+                      New food expense added
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-1">
+                      Yesterday
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+  <script src="js\script.js"></script>
+</body>
+</html>
