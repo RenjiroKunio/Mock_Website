@@ -33,46 +33,46 @@ export default function LandingPage() {
       <LandingNavbar />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-5">
+            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-4 sm:mb-5">
               🌍 Smart Group Travel Platform
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4 sm:mb-5">
               Travel Together <br />
               <span className="text-blue-600">Without Financial Stress</span>
             </h1>
-            <p className="text-gray-500 text-lg leading-relaxed mb-8">
+            <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
               NAVARA helps groups manage shared travel expenses, split payments fairly, track budgets in real time, and settle balances seamlessly.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <Link
                 href="/dashboard"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2.5 sm:py-3 rounded-xl transition-colors text-xs sm:text-sm text-center"
               >
                 Launch Dashboard
               </Link>
               <a
                 href="#features"
-                className="bg-white border border-gray-200 hover:border-blue-300 text-gray-700 font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
+                className="bg-white border border-gray-200 hover:border-blue-300 text-gray-700 font-semibold px-6 py-2.5 sm:py-3 rounded-xl transition-colors text-xs sm:text-sm text-center"
               >
                 Explore Features
               </a>
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 mt-10">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-6 sm:gap-8 mt-8 sm:mt-10">
               <div>
-                <p className="text-2xl font-bold text-gray-900">10K+</p>
+                <p className="text-xl sm:text-2xl font-bold text-gray-900">10K+</p>
                 <p className="text-xs text-gray-500">Group Trips Managed</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-gray-900">$2M+</p>
+                <p className="text-xl sm:text-2xl font-bold text-gray-900">$2M+</p>
                 <p className="text-xs text-gray-500">Expenses Tracked</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-gray-900">98%</p>
+                <p className="text-xl sm:text-2xl font-bold text-gray-900">98%</p>
                 <p className="text-xs text-gray-500">Satisfaction Rate</p>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function LandingPage() {
 
           {/* Hero mock card */}
           <div className="flex justify-center">
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 w-full max-w-sm">
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 sm:p-6 w-full max-w-sm">
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-2 h-2 bg-green-500 rounded-full" />
                 <span className="text-xs font-medium text-gray-500">Active Trip</span>
@@ -123,15 +123,15 @@ export default function LandingPage() {
       </section>
 
       {/* Features */}
-      <section id="features" className="py-20 px-6 bg-gray-50">
+      <section id="features" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">Everything Your Group Needs</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">Everything Your Group Needs</h2>
+            <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
               NAVARA simplifies collaborative travel budgeting with powerful financial management tools.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {features.map((f) => (
               <FeatureCard key={f.title} emoji={f.emoji} title={f.title} description={f.description} />
             ))}
@@ -140,13 +140,13 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-6 bg-white">
+      <section id="how-it-works" className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">How NAVARA Works</h2>
-            <p className="text-gray-500">Simple steps to stress-free group travel budgeting</p>
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">How NAVARA Works</h2>
+            <p className="text-gray-500 text-sm sm:text-base">Simple steps to stress-free group travel budgeting</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {steps.map((s) => (
               <div key={s.step} className="text-center">
                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">
@@ -162,15 +162,15 @@ export default function LandingPage() {
       </section>
 
       {/* Why NAVARA */}
-      <section id="why-navara" className="py-20 px-6 bg-blue-600">
+      <section id="why-navara" className="py-16 sm:py-20 px-4 sm:px-6 bg-blue-600">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-3">Why NAVARA?</h2>
-            <p className="text-blue-100 max-w-xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-3">Why NAVARA?</h2>
+            <p className="text-blue-100 text-sm sm:text-base max-w-xl mx-auto">
               One platform for planning, booking, scheduling, budgeting, and settlement.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {whyPoints.map((p) => (
               <div key={p.title} className="bg-white/10 backdrop-blur rounded-2xl p-5 text-white">
                 <div className="text-2xl mb-3">{p.emoji}</div>
@@ -183,13 +183,13 @@ export default function LandingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-white text-center">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">Ready to Simplify Group Travel?</h2>
-          <p className="text-gray-500 mb-8">Start managing shared travel expenses smarter with NAVARA.</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">Ready to Simplify Group Travel?</h2>
+          <p className="text-gray-500 text-sm sm:text-base mb-6 sm:mb-8">Start managing shared travel expenses smarter with NAVARA.</p>
           <Link
             href="/dashboard"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-sm"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-xl transition-colors text-xs sm:text-sm"
           >
             Start Your First Trip
           </Link>

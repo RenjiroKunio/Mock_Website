@@ -11,25 +11,25 @@ export default function TripCard({ trip }: { trip: Trip }) {
   const progress = Math.round((trip.spent / trip.pool) * 100)
 
   return (
-    <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-      <div className="flex items-start justify-between mb-3">
-        <div className="flex items-center gap-3">
-          <span className="text-2xl">{trip.emoji}</span>
-          <div>
-            <h3 className="font-semibold text-gray-900">{trip.name}</h3>
+    <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100">
+      <div className="flex items-start justify-between gap-2 mb-3">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <span className="text-xl sm:text-2xl flex-shrink-0">{trip.emoji}</span>
+          <div className="min-w-0">
+            <h3 className="font-semibold text-sm sm:text-base text-gray-900 truncate">{trip.name}</h3>
             <p className="text-xs text-gray-500">{trip.dates}</p>
           </div>
         </div>
-        <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${statusColors[trip.status]}`}>
+        <span className={`text-xs font-medium px-2.5 py-1 rounded-full flex-shrink-0 ${statusColors[trip.status]}`}>
           {trip.status}
         </span>
       </div>
 
       {/* Progress bar */}
       <div className="mb-3">
-        <div className="flex justify-between text-xs text-gray-500 mb-1">
-          <span>Spent: ${trip.spent.toLocaleString()}</span>
-          <span>Pool: ${trip.pool.toLocaleString()}</span>
+        <div className="flex justify-between text-xs text-gray-500 mb-1 gap-2">
+          <span className="truncate">Spent: ${trip.spent.toLocaleString()}</span>
+          <span className="text-right flex-shrink-0">Pool: ${trip.pool.toLocaleString()}</span>
         </div>
         <div className="w-full bg-gray-100 rounded-full h-2">
           <div
@@ -39,11 +39,11 @@ export default function TripCard({ trip }: { trip: Trip }) {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-2">
         <span className="text-xs text-gray-500">👥 {trip.members} members</span>
         <Link
           href="/trip"
-          className="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors"
+          className="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors flex-shrink-0"
         >
           View Trip →
         </Link>
